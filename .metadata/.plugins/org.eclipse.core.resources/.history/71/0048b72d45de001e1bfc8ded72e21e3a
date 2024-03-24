@@ -1,0 +1,45 @@
+package com.Assignment1;
+
+public class Players {
+	private int PlayerID;
+	private String PlyerName;
+	private int Age;
+	private String Team;
+	Players(int playerID, String playerName, int age, String team) {
+		super();
+		PlayerID = playerID;
+		PlyerName = playerName;
+		Age = age;
+		Team = team;
+	}
+	public int getPlayerID() {
+		return PlayerID;
+	}
+	public void setPlayerID(int playerID) {
+		PlayerID = playerID;
+	}
+	public String getPlyerName() {
+		return PlayerName;
+	}
+	public void setPlyerName(String plyerName) {
+		PlyerName = playerName;
+	}
+	public int getAge() {
+		return Age;
+	}
+	public void setAge(int age) {
+		Age = age;
+	}
+	public String getTeam() {
+		return Team;
+	}
+	public void setTeam(String team) {
+		Team = team;
+	}
+	@Override
+	public String toString() {
+		return "Players [PlayerID=" + PlayerID + ", PlyerName=" + PlyerName + ", Age=" + Age + ", Team=" + Team + "]";
+	}
+	
+
+}

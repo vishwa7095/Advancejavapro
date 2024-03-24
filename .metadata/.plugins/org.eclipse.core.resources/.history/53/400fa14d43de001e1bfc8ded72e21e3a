@@ -1,0 +1,17 @@
+package com.Assignment1;
+
+public class Players {
+	private int PlayerID;
+	private String PlyerName;
+	private int Age;
+	private String Team;
+	Players(int playerID, String plyerName, int age, String team) {
+		super();
+		PlayerID = playerID;
+		PlyerName = plyerName;
+		Age = age;
+		Team = team;
+	}
+	
+
+}

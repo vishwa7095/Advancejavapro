@@ -1,0 +1,23 @@
+package com.List;
+import java.util.*;
+public class Employeedetails {
+
+	public static void main(String[] args) {
+		List<Employee> EMP=new ArrayList<Employee>();
+		EMP.add(new Employee(101,"bharath",50000));
+		EMP.add(new Employee(102,"aslam",50000));
+		EMP.add(new Employee(103,"manikanta",75000));
+		EMP.add(new Employee(104,"saibabu",75000));
+		Collections.reverse(EMP);
+		for(Employee x:EMP)
+		{
+			System.out.println(x);
+		}
+
+//		for(Employee x:EMP);
+//		{
+//			System.out.println(x);
+//		}
+	}
+
+}

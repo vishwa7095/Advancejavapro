@@ -1,0 +1,14 @@
+package com.List;
+
+public class Employee {
+	private int empID;
+	private String empName;
+	private double empSalary;
+	Employee(int empID, String empName, double empSalary) {
+		super();
+		this.empID = empID;
+		this.empName = empName;
+		this.empSalary = empSalary;
+	}
+	
+}

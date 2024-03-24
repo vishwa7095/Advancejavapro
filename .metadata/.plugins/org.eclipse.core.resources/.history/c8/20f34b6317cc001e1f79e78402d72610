@@ -1,0 +1,57 @@
+package com.Sathya.jdbc2;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class EmployeeDao {
+
+	public int save(EmployeeInfo emp)
+	{
+		//DECLARE THE RESOURCES
+		Connection connection=null;
+		PreparedStatement preparedStatement=null;
+		int count=0;
+		try
+		{
+			//GET THE CONNECTION
+			 connection =DBconnection.CreateConnection();
+			//CREATE PS OBJECT
+			preparedStatement = connection.prepareStatement("insert into emp values(?,?,?)");
+			
+			//READ THE DATA FROM EMP OBJECT AND SET TO PARAMETERS
+			
+			preparedStatement.setInt(1, emp.empID);
+			preparedStatement.setString(2, emp.empName);
+			preparedStatement.setDouble(3, emp.empSalary);
+			
+			count = preparedStatement.executeUpdate();
+		}
+		catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				if(connection!=null)
+				{
+					connection.close();
+				}
+				if(preparedStatement!=null)
+				{
+					preparedStatement.close();
+				}
+			}
+			catch(SQLException e)
+			{
+				e.printStackTrace();
+			}
+		}
+		return count;
+		
+	}
+		
+}

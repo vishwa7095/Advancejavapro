@@ -1,0 +1,31 @@
+ 
+
+import com.Assignment1.Players;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Example2 {
+
+	public static void main(String[] args) {
+		List<Players> pl =new ArrayList<Players>();
+		pl.add(new Players(101,"DHONI",31,"CSK"));
+		pl.add(new Players(102,"VIRAT KOHILI",28,"CSK"));
+		pl.add(new Players(103,"RAHUL",22,"CSK"));
+		pl.add(new Players(104,"RASHID KHAN",25,"CSK"));
+		pl.add(new Players(105,"RAINA",21,"CSK"));
+		pl.add(new Players(106,"ANDRE RUSSEL",35,"CSK"));
+		 List<Players> players = new ArrayList<>();
+	        for (Players player : pl) {
+	            if (player.getAge() < 30) {
+	                players.add(player);
+	            }
+	        }
+	        for(Players x:players)
+	        {
+	        	System.out.println(pl);
+	        }
+
+
+	}
+
+}
